@@ -1,24 +1,30 @@
 ﻿@inherits LayoutComponentBase
 
-<header>
+<div class="Layout">
+    <div class="header">
     <h1>Our List</h1>
-</header>
-
-<nav>
-    <a href="/">Home</a>
-    <a href="/counter">Counter</a>
-    <a href="/converter">Converter</a>
-</nav>
-
-<div>
     <a>@today.ToString("ddddm, dd MMMM yyyy")</a>
+    </div>
+
+
+<div class="sidebar">
+    <NavMenu/>
 </div>
 
-@Body
+<div class="content">
+    
+    <p>@Body</p>
+</div>
 
-<footer>
+
+
+<div class="footer">
+    <footer>
     @footerMessage
-</footer>
+    </footer>
+</div>
+
+</div>
 
 @code {
     DateTime today = DateTime.Today;
